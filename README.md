@@ -29,3 +29,12 @@ Follow the steps below to launch your model in Gazebo:
    ```bash
    ign gazebo maze/model.sdf
    ```
+
+
+<div align="center">
+  <img src="images/Screenshot from 2024-12-12 16-39-45.png" alt="model" style="width: 100%; max-width: 800px;">
+</div>
+
+<div align="center">
+  <img src="images/Screenshot from 2024-12-12 16-40-12.png" alt="model" style="width: 100%; max-width: 800px;">
+</div>
