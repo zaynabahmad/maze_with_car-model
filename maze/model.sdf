@@ -1,0 +1,1474 @@
+<sdf version='1.9'>
+  <world name='maze_1_6x5'>
+    <!-- <gravity>0 0 -9.8</gravity> -->
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <scene>
+      <grid>false</grid>
+    </scene>
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-sensors-system"
+      name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+
+    <gui fullscreen='false'>
+      <plugin name='3D View' filename='GzScene3D'>
+        <ignition-gui>
+          <title>3D View</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='string' key='state'>docked</property>
+        </ignition-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.5 0.8 0.95</background_color>
+        <camera_follow>
+          <target>prius_hybrid</target>
+          <p_gain>0.5</p_gain>
+          <offset>0.5 5 2</offset>
+        </camera_follow>
+      </plugin>
+
+      <plugin filename="InteractiveViewControl" name="Interactive view control">
+        <ignition-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </ignition-gui>
+      </plugin>
+
+      <plugin name='World control' filename='WorldControl'>
+        <ignition-gui>
+          <title>World control</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='bool' key='resizable'>false</property>
+          <property type='double' key='height'>72</property>
+          <property type='double' key='width'>121</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='left' target='left'/>
+            <line own='bottom' target='bottom'/>
+          </anchors>
+        </ignition-gui>
+        <play_pause>true</play_pause>
+        <step>true</step>
+        <start_paused>true</start_paused>
+      </plugin>
+      <plugin name='World stats' filename='WorldStats'>
+        <ignition-gui>
+          <title>World stats</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='bool' key='resizable'>false</property>
+          <property type='double' key='height'>110</property>
+          <property type='double' key='width'>290</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='right' target='right'/>
+            <line own='bottom' target='bottom'/>
+          </anchors>
+        </ignition-gui>
+        <sim_time>true</sim_time>
+        <real_time>true</real_time>
+        <real_time_factor>true</real_time_factor>
+        <iterations>true</iterations>
+      </plugin>
+      <plugin name='dis' filename='ImageDisplay'>
+        <ignition-gui>
+          <property key='state' type='string'>docked</property>
+        </ignition-gui>
+        <topic>front_camera</topic>
+      </plugin>
+      <plugin name='Teleop' filename='Teleop'>
+        <ignition-gui>
+          <property type='string' key='state'>docked</property>
+        </ignition-gui>
+        <topic>/cmd_vel</topic>
+      </plugin>
+    
+    <plugin filename="EntityTree" name="Entity tree">
+    </plugin>
+
+    <plugin filename="CameraTracking" name="Camera Tracking">
+        <ignition-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </ignition-gui>
+    </plugin>
+    </gui>
+
+        <model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    </plane>
+                </geometry>
+                </collision>
+                <visual name="visual">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    <size>700 700</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.8 0.8 0.8 1</ambient>
+                    <diffuse>0.8 0.8 0.8 1</diffuse>
+                    <specular>0.8 0.8 0.8 1</specular>
+                </material>
+                </visual>
+            </link>
+        </model>
+
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_0_b</name>
+      <pose>0 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_0_b</name>
+      <pose>0 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_1_0_b</name>
+      <pose>10 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_1_0_b</name>
+      <pose>10 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_0_b</name>
+      <pose>20 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_0_b</name>
+      <pose>20 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_0_b</name>
+      <pose>30 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_0_b</name>
+      <pose>30 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_4_0_b</name>
+      <pose>40 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_4_0_b</name>
+      <pose>40 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_0_b</name>
+      <pose>50 0 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_5_0_b</name>
+      <pose>50 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_5_b</name>
+      <pose>0 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_1_5_b</name>
+      <pose>10 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_1_5_b</name>
+      <pose>10 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_5_b</name>
+      <pose>20 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_5_b</name>
+      <pose>20 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_5_b</name>
+      <pose>30 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_5_b</name>
+      <pose>30 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_4_5_b</name>
+      <pose>40 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_4_5_b</name>
+      <pose>40 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_5_b</name>
+      <pose>50 50 0 0 -0 1.571</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_5_5_b</name>
+      <pose>50 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_0_a</name>
+      <pose>0 0 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_1_a</name>
+      <pose>0 10 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_1_a</name>
+      <pose>0 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_2_a</name>
+      <pose>0 20 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_2_a</name>
+      <pose>0 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_3_a</name>
+      <pose>0 30 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_3_a</name>
+      <pose>0 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_0_4_a</name>
+      <pose>0 40 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_4_a</name>
+      <pose>0 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_0_5_a</name>
+      <pose>0 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_0_a</name>
+      <pose>60 0 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_0_a</name>
+      <pose>60 0 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_1_a</name>
+      <pose>60 10 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_1_a</name>
+      <pose>60 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_2_a</name>
+      <pose>60 20 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_2_a</name>
+      <pose>60 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_3_a</name>
+      <pose>60 30 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_3_a</name>
+      <pose>60 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_4_a</name>
+      <pose>60 40 0 0 -0 3.14159</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_4_a</name>
+      <pose>60 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_6_5_a</name>
+      <pose>60 50 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_1_1_c</name>
+      <pose>10 10 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_1_c</name>
+      <pose>30 10 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_1_c</name>
+      <pose>50 10 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_6_1_c</name>
+      <pose>60 10 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_2_c</name>
+      <pose>20 20 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_4_2_c</name>
+      <pose>40 20 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_2_c</name>
+      <pose>50 20 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_3_c</name>
+      <pose>20 30 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_3_c</name>
+      <pose>30 30 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_4_c</name>
+      <pose>20 40 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_4_c</name>
+      <pose>30 40 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_4_4_c</name>
+      <pose>40 40 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_1_4_a</name>
+      <pose>10 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_1_a</name>
+      <pose>20 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_2_2_a</name>
+      <pose>20 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_2_a</name>
+      <pose>30 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_3_3_a</name>
+      <pose>30 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_4_4_a</name>
+      <pose>40 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_4_a</name>
+      <pose>50 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://plywood_panel</uri>
+      <name>plywood_panel_5_3_a</name>
+      <pose>50 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_1</name>
+      <pose>20 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_1</name>
+      <pose>30 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_5_1</name>
+      <pose>50 10 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_2</name>
+      <pose>20 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_2</name>
+      <pose>30 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_4_2</name>
+      <pose>40 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_5_2</name>
+      <pose>50 20 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_1_3</name>
+      <pose>10 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_3</name>
+      <pose>20 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_3</name>
+      <pose>30 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_5_3</name>
+      <pose>50 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_1_4</name>
+      <pose>10 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_2_4</name>
+      <pose>20 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_3_4</name>
+      <pose>30 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://wooden_joint</uri>
+      <name>wooden_joint_4_4</name>
+      <pose>40 40 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://cone</uri>
+      <name>cone1</name>
+      <pose>10 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://cone</uri>
+      <name>cone2</name>
+      <pose>47.5 30 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file://cone</uri>
+      <name>cone4</name>
+      <pose>25 48 0 0 -0 0</pose>
+    </include>
+    <model name='prius_hybrid'>
+      <pose>4 5 0.0007 -0 -0.0005 1.5832</pose>
+      <link name='chassis'>
+        <inertial>
+          <mass>1326</mass>
+          <pose>0 -0.266 0.48 0 -0 0</pose>
+          <inertia>
+            <ixx>2581.1300000000001</ixx>
+            <ixy>0</ixy>
+            <iyy>591.30799999999999</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>2681.9499999999998</izz>
+          </inertia>
+        </inertial>
+        <visual name='chassis_visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Hybrid</name>
+                <center>false</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='interior_visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Hybrid_Interior</name>
+                <center>false</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='windows_visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Hybrid_Windows</name>
+                <center>false</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='chassis'>
+          <pose>0.0 0.05 0.625 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.7526 2.1 0.95</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='front_bumper'>
+          <pose>0.0 -2.0 0.458488 0.0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.33728 0.48 0.566691</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='hood'>
+          <pose>0.0 -1.900842 0.676305 0.341247 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.59797 0.493107 0.265468</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='windshield'>
+          <pose>0.0 -0.875105 1.032268 0.335476 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.16838 1.65425 0.272347</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='top_front'>
+          <pose>0.0 0.161236 1.386042 0.135030 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.27915 0.625988 0.171868</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='top_rear'>
+          <pose>0.0 0.817696 1.360069 -0.068997 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.28513 0.771189 0.226557</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='rear_window'>
+          <pose>0.0 1.640531 1.175126 -0.262017 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.26785 1.11634 0.244286</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='trunk'>
+          <pose>0.0 1.637059 0.888180 0.0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.78806 1.13899 0.482746</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='back_bumper'>
+          <pose>0.0 2.054454 0.577870 0.0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.78165 0.512093 0.581427</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <sensor name='back_camera_sensor' type='camera'>
+          <pose>0 1.45 1.4 0 0.05 1.5707</pose>
+          <topic>back_camera</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='back_camera'>
+            <pose>0 0 0 0 -0 0</pose>
+            <horizontal_fov>1.3962600000000001</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>800</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.0070000000000000001</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <sensor name='front_camera_sensor' type='camera'>
+          <pose>0 -0.4 1.4 0 0.05 -1.5707</pose>
+          <topic>front_camera</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='front_camera'>
+            <pose>0 0 0 0 -0 0</pose>
+            <horizontal_fov>1.3962600000000001</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>800</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.0070000000000000001</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <sensor name='left_camera_sensor' type='camera'>
+          <pose>1 -0.7 1 0 0.05 1</pose>
+          <topic>left_camera</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='left_camera'>
+            <pose>0 0 0 0 -0 0</pose>
+            <horizontal_fov>1.3962600000000001</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>800</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.0070000000000000001</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <sensor name='right_camera_sensor' type='camera'>
+          <pose>-1 -0.7 1 0 0.05 2.1416</pose>
+          <topic>right_camera</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='right_camera'>
+            <pose>0 0 0 0 -0 0</pose>
+            <horizontal_fov>1.3962600000000001</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>800</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.0070000000000000001</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='steering_wheel'>
+        <pose>0.357734 -0.627878 0.988237 -1.30211 0.002885 -0.004841</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.14583299999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14583299999999999</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.178172</radius>
+              <length>0.041845</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <min_depth>0.0030000000000000001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.302101 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Steering_Wheel</name>
+                <center>true</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='front_left_wheel'>
+        <pose>0.76 -1.41 0.3 -2.49718 -0 0.09845</pose>
+        <inertial>
+          <mass>11</mass>
+          <inertia>
+            <ixx>0.58631200000000006</ixx>
+            <ixy>0</ixy>
+            <iyy>0.33552900000000002</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.33552900000000002</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <pose>0.04 0.0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Wheel_Front_Left_</name>
+                <center>true</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.31264999999999998</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <min_depth>0.001</min_depth>
+                <kp>1000000000</kp>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='front_right_wheel'>
+        <pose>-0.76 -1.41 0.3 -1.53358 -0 0.042952</pose>
+        <inertial>
+          <mass>11</mass>
+          <inertia>
+            <ixx>0.58631200000000006</ixx>
+            <ixy>0</ixy>
+            <iyy>0.33552900000000002</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.33552900000000002</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <pose>-0.04 0.0 0.0 0 0 0</pose>
+          <pose>0 0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Wheel_Front_Right</name>
+                <center>true</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.31264999999999998</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.90000000000000002</mu>
+                <mu2>0.90000000000000002</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <min_depth>0.001</min_depth>
+                <kp>1000000000</kp>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='rear_left_wheel'>
+        <pose>0.786 1.45 0.3 -2.49718 -0 0</pose>
+        <inertial>
+          <mass>11</mass>
+          <inertia>
+            <ixx>0.58631200000000006</ixx>
+            <ixy>0</ixy>
+            <iyy>0.33552900000000002</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.33552900000000002</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <pose>0.04 0.0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Wheel_Front_Left_</name>
+                <center>true</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.31264999999999998</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.1000000000000001</mu>
+                <mu2>1.1000000000000001</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <min_depth>0.001</min_depth>
+                <kp>1000000000</kp>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='rear_right_wheel'>
+        <pose>-0.786 1.45 0.3 -1.53358 -0 -0</pose>
+        <inertial>
+          <mass>11</mass>
+          <inertia>
+            <ixx>0.58631200000000006</ixx>
+            <ixy>0</ixy>
+            <iyy>0.33552900000000002</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.33552900000000002</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <pose>-0.04 0.0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.ignitionrobotics.org/1.0/openrobotics/models/prius hybrid/2/files/meshes/Hybrid.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+              <submesh>
+                <name>Wheel_Front_Right</name>
+                <center>true</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.31264999999999998</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.1000000000000001</mu>
+                <mu2>1.1000000000000001</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <min_depth>0.001</min_depth>
+                <kp>1000000000</kp>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='rear_axle'>
+        <pose>0 1.45 0.3 -0 -0 -0</pose>
+        <inertial>
+          <mass>30</mass>
+          <inertia>
+            <ixx>0.084375000000000006</ixx>
+            <ixy>0</ixy>
+            <iyy>4.64581</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>4.64581</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <pose>0.0 0.0 0.0 0 1.5707963267948966 0</pose>
+          <geometry>
+            <cylinder>
+              <length>1.357</length>
+              <radius>0.074999999999999997</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='rear_axle_joint' type='revolute'>
+        <child>rear_axle</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.050890600000000001</lower>
+            <upper>0.050890600000000001</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>20000</spring_stiffness>
+            <damping>2000</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='rear_left_wheel_joint' type='revolute'>
+        <child>rear_left_wheel</child>
+        <parent>rear_axle</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>12.031599999999999</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='rear_right_wheel_joint' type='revolute'>
+        <child>rear_right_wheel</child>
+        <parent>rear_axle</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>12.031599999999999</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='steering_joint' type='revolute'>
+        <pose>-0.002 -0 0 0 -0 0</pose>
+        <parent>chassis</parent>
+        <child>steering_wheel</child>
+        <axis>
+          <xyz expressed_in='__model__'>0 0.964095 0.265556</xyz>
+          <limit>
+            <lower>-7.8499999999999996</lower>
+            <upper>7.8499999999999996</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>1</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <cfm_damping>true</cfm_damping>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_left_wheel_steering_link'>
+        <pose>0.76 -1.41 0.3 -0 0 0.09845</pose>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.015299999999999999</ixx>
+            <iyy>0.025000000000000001</iyy>
+            <izz>0.015299999999999999</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='front_right_wheel_steering_link'>
+        <pose>-0.76 -1.41 0.3 0 -0 0.042952</pose>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.015299999999999999</ixx>
+            <iyy>0.025000000000000001</iyy>
+            <izz>0.015299999999999999</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='front_left_wheel_steering_joint' type='revolute'>
+        <child>front_left_wheel_steering_link</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>-0.87270000000000003</lower>
+            <upper>0.87270000000000003</upper>
+            <effort>1000000</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='front_right_wheel_steering_joint' type='revolute'>
+        <parent>chassis</parent>
+        <child>front_right_wheel_steering_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.87270000000000003</lower>
+            <upper>0.87270000000000003</upper>
+            <effort>1000000</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='front_left_wheel_joint' type='revolute'>
+        <parent>front_left_wheel_steering_link</parent>
+        <child>front_left_wheel</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.7976900000000001e+308</lower>
+            <upper>1.7976900000000001e+308</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>18.0474</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <joint name='front_right_wheel_joint' type='revolute'>
+        <parent>front_right_wheel_steering_link</parent>
+        <child>front_right_wheel</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.7976900000000001e+308</lower>
+            <upper>1.7976900000000001e+308</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>18.0474</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 -0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::AckermannSteering' filename='ignition-gazebo-ackermann-steering-system'>
+        <topic>/cmd_vel</topic>
+        <left_joint>front_left_wheel_joint</left_joint>
+        <left_joint>rear_left_wheel_joint</left_joint>
+        <right_joint>front_right_wheel_joint</right_joint>
+        <right_joint>rear_right_wheel_joint</right_joint>
+        <left_steering_joint>front_left_wheel_steering_joint</left_steering_joint>
+        <right_steering_joint>front_right_wheel_steering_joint</right_steering_joint>
+        <kingpin_width>1.0</kingpin_width>
+        <steering_limit>0.5</steering_limit>
+        <wheel_base>1.0</wheel_base>
+        <wheel_separation>1.572</wheel_separation>
+        <wheel_radius>0.31265</wheel_radius>
+        <min_velocity>-10</min_velocity>
+        <max_velocity>100</max_velocity>
+        <min_acceleration>-30</min_acceleration>
+        <max_acceleration>30</max_acceleration>
+      </plugin>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+  </world>
+</sdf>
