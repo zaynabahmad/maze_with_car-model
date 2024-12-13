@@ -1,0 +1,33 @@
+running egg_info
+creating ../../build/maze_ros2_gz/maze_ros2_gz.egg-info
+writing ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/PKG-INFO
+writing dependency_links to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/dependency_links.txt
+writing entry points to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/entry_points.txt
+writing requirements to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/requires.txt
+writing top-level names to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/top_level.txt
+writing manifest file '../../build/maze_ros2_gz/maze_ros2_gz.egg-info/SOURCES.txt'
+reading manifest file '../../build/maze_ros2_gz/maze_ros2_gz.egg-info/SOURCES.txt'
+writing manifest file '../../build/maze_ros2_gz/maze_ros2_gz.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build
+creating /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build/lib
+creating /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build/lib/maze_ros2_gz
+copying maze_ros2_gz/__init__.py -> /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build/lib/maze_ros2_gz
+running install
+running install_lib
+creating /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz
+copying /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build/lib/maze_ros2_gz/__init__.py -> /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz
+byte-compiling /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/ament_index
+creating /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/ament_index/resource_index
+creating /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/ament_index/resource_index/packages
+copying resource/maze_ros2_gz -> /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/ament_index/resource_index/packages
+copying package.xml -> /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/maze_ros2_gz
+creating /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/maze_ros2_gz/launch
+copying launch/launch.launch.py -> /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/maze_ros2_gz/launch
+running install_egg_info
+Copying ../../build/maze_ros2_gz/maze_ros2_gz.egg-info to /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/install.log'

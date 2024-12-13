@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating maze_ros2_gz.egg-info
+writing maze_ros2_gz.egg-info/PKG-INFO
+writing dependency_links to maze_ros2_gz.egg-info/dependency_links.txt
+writing entry points to maze_ros2_gz.egg-info/entry_points.txt
+writing requirements to maze_ros2_gz.egg-info/requires.txt
+writing top-level names to maze_ros2_gz.egg-info/top_level.txt
+writing manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+reading manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+writing manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/lib/python3.10/site-packages/maze-ros2-gz.egg-link (link to .)
+
+Installed /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz
+running symlink_data
+creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index
+creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index
+creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index/packages
+symbolically linking /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/resource/maze_ros2_gz -> /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index/packages
+symbolically linking /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/package.xml -> /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/maze_ros2_gz

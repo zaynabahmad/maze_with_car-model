@@ -1,0 +1,21 @@
+[0.708s] Invoking command in '/home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz': PYTHONPATH=/home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/maze_ros2_gz build --build-base /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build install --record /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/install.log --single-version-externally-managed install_data
+[0.990s] running egg_info
+[0.991s] writing ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/PKG-INFO
+[0.991s] writing dependency_links to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/dependency_links.txt
+[0.991s] writing entry points to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/entry_points.txt
+[0.991s] writing requirements to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/requires.txt
+[0.991s] writing top-level names to ../../build/maze_ros2_gz/maze_ros2_gz.egg-info/top_level.txt
+[0.993s] reading manifest file '../../build/maze_ros2_gz/maze_ros2_gz.egg-info/SOURCES.txt'
+[0.994s] writing manifest file '../../build/maze_ros2_gz/maze_ros2_gz.egg-info/SOURCES.txt'
+[0.994s] running build
+[0.994s] running build_py
+[0.994s] running install
+[0.995s] running install_lib
+[0.996s] running install_data
+[0.996s] copying launch/launch.launch.py -> /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/share/maze_ros2_gz/launch
+[0.996s] running install_egg_info
+[0.998s] removing '/home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz-0.0.0-py3.10.egg-info' (and everything under it)
+[0.998s] Copying ../../build/maze_ros2_gz/maze_ros2_gz.egg-info to /home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages/maze_ros2_gz-0.0.0-py3.10.egg-info
+[0.999s] running install_scripts
+[1.019s] writing list of installed files to '/home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/install.log'
+[1.043s] Invoked command in '/home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz' returned '0': PYTHONPATH=/home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zaynap/maze_with_car-model/maze_robot/install/maze_ros2_gz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/maze_ros2_gz build --build-base /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/build install --record /home/zaynap/maze_with_car-model/maze_robot/build/maze_ros2_gz/install.log --single-version-externally-managed install_data

@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+maze_ros2_gz/__init__.py
+maze_ros2_gz.egg-info/PKG-INFO
+maze_ros2_gz.egg-info/SOURCES.txt
+maze_ros2_gz.egg-info/dependency_links.txt
+maze_ros2_gz.egg-info/entry_points.txt
+maze_ros2_gz.egg-info/requires.txt
+maze_ros2_gz.egg-info/top_level.txt
+maze_ros2_gz.egg-info/zip-safe
+resource/maze_ros2_gz

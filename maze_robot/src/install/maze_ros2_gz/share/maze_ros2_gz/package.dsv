@@ -1,0 +1,9 @@
+source;share/maze_ros2_gz/hook/pythonpath.ps1
+source;share/maze_ros2_gz/hook/pythonpath.dsv
+source;share/maze_ros2_gz/hook/pythonpath.sh
+source;share/maze_ros2_gz/hook/ament_prefix_path.ps1
+source;share/maze_ros2_gz/hook/ament_prefix_path.dsv
+source;share/maze_ros2_gz/hook/ament_prefix_path.sh
+source;../../build/maze_ros2_gz/share/maze_ros2_gz/hook/pythonpath_develop.ps1
+source;../../build/maze_ros2_gz/share/maze_ros2_gz/hook/pythonpath_develop.dsv
+source;../../build/maze_ros2_gz/share/maze_ros2_gz/hook/pythonpath_develop.sh

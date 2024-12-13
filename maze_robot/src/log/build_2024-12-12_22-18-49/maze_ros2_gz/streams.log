@@ -1,0 +1,25 @@
+[0.684s] Invoking command in '/home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz': PYTHONPATH=/home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/build --no-deps symlink_data
+[0.977s] running develop
+[0.977s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.977s]   warnings.warn(
+[1.226s] running egg_info
+[1.226s] creating maze_ros2_gz.egg-info
+[1.226s] writing maze_ros2_gz.egg-info/PKG-INFO
+[1.226s] writing dependency_links to maze_ros2_gz.egg-info/dependency_links.txt
+[1.226s] writing entry points to maze_ros2_gz.egg-info/entry_points.txt
+[1.226s] writing requirements to maze_ros2_gz.egg-info/requires.txt
+[1.226s] writing top-level names to maze_ros2_gz.egg-info/top_level.txt
+[1.227s] writing manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+[1.230s] reading manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+[1.230s] writing manifest file 'maze_ros2_gz.egg-info/SOURCES.txt'
+[1.232s] running build_ext
+[1.233s] Creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/lib/python3.10/site-packages/maze-ros2-gz.egg-link (link to .)
+[1.234s] 
+[1.234s] Installed /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz
+[1.234s] running symlink_data
+[1.234s] creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index
+[1.234s] creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index
+[1.234s] creating /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index/packages
+[1.235s] symbolically linking /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/resource/maze_ros2_gz -> /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/ament_index/resource_index/packages
+[1.235s] symbolically linking /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/package.xml -> /home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/share/maze_ros2_gz
+[1.272s] Invoked command in '/home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz' returned '0': PYTHONPATH=/home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zaynap/maze_with_car-model/maze_robot/src/install/maze_ros2_gz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/zaynap/maze_with_car-model/maze_robot/src/build/maze_ros2_gz/build --no-deps symlink_data
