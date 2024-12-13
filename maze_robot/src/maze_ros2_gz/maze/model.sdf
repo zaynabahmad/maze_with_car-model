@@ -154,412 +154,412 @@
         </model>
 
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_0_b</name>
       <pose>0 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_0_b</name>
       <pose>0 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_1_0_b</name>
       <pose>10 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_1_0_b</name>
       <pose>10 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_0_b</name>
       <pose>20 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_0_b</name>
       <pose>20 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_0_b</name>
       <pose>30 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_0_b</name>
       <pose>30 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_4_0_b</name>
       <pose>40 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_4_0_b</name>
       <pose>40 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_0_b</name>
       <pose>50 0 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_5_0_b</name>
       <pose>50 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_5_b</name>
       <pose>0 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_1_5_b</name>
       <pose>10 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_1_5_b</name>
       <pose>10 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_5_b</name>
       <pose>20 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_5_b</name>
       <pose>20 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_5_b</name>
       <pose>30 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_5_b</name>
       <pose>30 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_4_5_b</name>
       <pose>40 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_4_5_b</name>
       <pose>40 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_5_b</name>
       <pose>50 50 0 0 -0 1.571</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_5_5_b</name>
       <pose>50 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_0_a</name>
       <pose>0 0 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_1_a</name>
       <pose>0 10 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_1_a</name>
       <pose>0 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_2_a</name>
       <pose>0 20 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_2_a</name>
       <pose>0 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_3_a</name>
       <pose>0 30 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_3_a</name>
       <pose>0 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_0_4_a</name>
       <pose>0 40 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_4_a</name>
       <pose>0 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_0_5_a</name>
       <pose>0 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_0_a</name>
       <pose>60 0 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_0_a</name>
       <pose>60 0 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_1_a</name>
       <pose>60 10 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_1_a</name>
       <pose>60 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_2_a</name>
       <pose>60 20 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_2_a</name>
       <pose>60 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_3_a</name>
       <pose>60 30 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_3_a</name>
       <pose>60 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_4_a</name>
       <pose>60 40 0 0 -0 3.14159</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_4_a</name>
       <pose>60 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_6_5_a</name>
       <pose>60 50 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_1_1_c</name>
       <pose>10 10 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_1_c</name>
       <pose>30 10 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_1_c</name>
       <pose>50 10 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_6_1_c</name>
       <pose>60 10 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_2_c</name>
       <pose>20 20 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_4_2_c</name>
       <pose>40 20 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_2_c</name>
       <pose>50 20 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_3_c</name>
       <pose>20 30 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_3_c</name>
       <pose>30 30 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_4_c</name>
       <pose>20 40 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_4_c</name>
       <pose>30 40 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_4_4_c</name>
       <pose>40 40 0 0 0 -1.5708</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_1_4_a</name>
       <pose>10 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_1_a</name>
       <pose>20 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_2_2_a</name>
       <pose>20 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_2_a</name>
       <pose>30 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_3_3_a</name>
       <pose>30 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_4_4_a</name>
       <pose>40 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>/home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_4_a</name>
       <pose>50 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://plywood_panel</uri>
+      <uri>/home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/plywood_panel</uri>
       <name>plywood_panel_5_3_a</name>
       <pose>50 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_1</name>
       <pose>20 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_1</name>
       <pose>30 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_5_1</name>
       <pose>50 10 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_2</name>
       <pose>20 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_2</name>
       <pose>30 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_4_2</name>
       <pose>40 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_5_2</name>
       <pose>50 20 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_1_3</name>
       <pose>10 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_3</name>
       <pose>20 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_3</name>
       <pose>30 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_5_3</name>
       <pose>50 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_1_4</name>
       <pose>10 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_2_4</name>
       <pose>20 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_3_4</name>
       <pose>30 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://wooden_joint</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/wooden_joint</uri>
       <name>wooden_joint_4_4</name>
       <pose>40 40 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://cone</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/cone</uri>
       <name>cone1</name>
       <pose>10 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://cone</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/cone</uri>
       <name>cone2</name>
       <pose>47.5 30 0 0 -0 0</pose>
     </include>
     <include>
-      <uri>file://cone</uri>
+      <uri>file:///home/zaynap/maze_with_car-model/maze_robot/src/maze_ros2_gz/maze/cone</uri>
       <name>cone4</name>
       <pose>25 48 0 0 -0 0</pose>
     </include>
